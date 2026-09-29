@@ -76,14 +76,14 @@ let comidas = [
 ]
 
 
-const comidaContainer = document.getElementById('comidaContainer');
+const comidasContainer = document.getElementById('comidaContainer');
 
-comidaConteiner.innerHTML =  
+console.log(comidasContainer)
+comidasConteiner.innerHTML =  
 `
 <article class="card">
 <h2>${comidas[5].nombre}</h2>
 <p>${comidas[5].provincia}</p>
 <span>${comidas[5].categoria}</span>
 </article>
-
 `
