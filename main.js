@@ -75,7 +75,7 @@ let comidas =
       "provincia": "Entre Ríos",
       "ingredientes": ["Harina", "Agua", "Sal", "Grasa"]
     }
-  ]
+]
 const comidasContainer = document.getElementById("comidaContainer");
 
 
@@ -108,5 +108,3 @@ ${comidas[i].ingredientes.map(ingrediente => `<li>${ingrediente}</li>`).join('')
 });
 }
 mostrarComidasConFor()
-
-

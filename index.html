@@ -11,12 +11,22 @@
       <!-- Para filtros y navegacion -->
     </header>
 
-    <main class="comida-container" id="comidaContainer">
-        <!-- Contenido Dinamico -->
+    <main class="comida-container" id="comidasContainer"></main>
+
+
+         
     </main>     
 
     <section class="addFood">
       <!-- Para el form para agregar comida -->
+       <form id="agregarComidaForm">
+        <h2>Agregar Comida</h2>
+        <label for="nombre">Nombre de la comida</label>
+        <input type="text" id="nombre" placeholder="Nombre de la comida" required>
+
+        <label for="provincia">Provincia</label>
+        <input type="text" id="provincia">
+       </form>
     </section>
 
     <script type="module" src="./main.js"></script>
