@@ -8,25 +8,28 @@
 </head>
 <body>
     <header>
-      <!-- Para filtros y navegacion -->
+
     </header>
 
-    <main class="comida-container" id="comidasContainer"></main>
-
-
-         
-    </main>     
+    
+    <main class="comida-container" id="comidaContainer"></main> 
 
     <section class="addFood">
-      <!-- Para el form para agregar comida -->
-       <form id="agregarComidaForm">
+
+      <form id="agregarComidaForm">
         <h2>Agregar Comida</h2>
+
         <label for="nombre">Nombre de la comida</label>
-        <input type="text" id="nombre" placeholder="Nombre de la comida" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de la comida" required>
 
         <label for="provincia">Provincia</label>
-        <input type="text" id="provincia">
-       </form>
+        <input type="text" id="provincia" name="provincia" required>
+
+        <label for="categoria">Categoría</label>
+        <input type="text" id="categoria" name="categoria" required>
+
+        <button type="submit">Agregar</button>
+      </form>
     </section>
 
     <script type="module" src="./main.js"></script>
