@@ -66,3 +66,11 @@ agregarComidaForm.addEventListener("submit", (event) => {
   mostrarComidasConFor(comidas)
   event.target.reset()
 })
+
+const filtroCategoria = document.getElementById("filtroCategoria")
+
+let comidasFiltradas = comidas.filter( comida => {
+  return comida.categoria.includes(filtroCategoria.value)
+})
+
+mostrarComidasConFor(comidasFiltradas)
