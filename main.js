@@ -1,7 +1,7 @@
 /*
     Cargar comidas en memoria desde el JSON
 */
-fetch('./data/comidas.json')          // Ruta al archivo JSON
+fetch('./data/comidas-extended.json')          // Ruta al archivo JSON
   .then(response => response.json())  // Convertir la respuesta en JSON
   .then(data => {                     // Acceso al JSON en formato de objeto JS
     console.log('Comidas cargadas desde JSON:');
@@ -53,7 +53,8 @@ const agregarComidaForm = document.getElementById ("agregarComidaForm")
 
 agregarComidaForm.addEventListener("submit", (event) => {
 
-  alert("Comida agregada: " + event.target.nombre.value);
+  event.preventDefault()
+  //alert("Comida agregada: " + event.target.nombre.value);
 
   let nuevaComida = {
   nombre:event.target.nombre.value,
@@ -68,9 +69,28 @@ agregarComidaForm.addEventListener("submit", (event) => {
 })
 
 const filtroCategoria = document.getElementById("filtroCategoria")
+const filtroProvincia = document.getElementById("filtroCategoria")
+const busqueda = document.getElementById("buscador")
 
+function filtrar() {
 let comidasFiltradas = comidas.filter( comida => {
   return comida.categoria.includes(filtroCategoria.value)
+   && comida.categoria.includes(filtroCategoria.value)
+   && comida.provincia.includes(filtroProvincia.value)
 })
 
 mostrarComidasConFor(comidasFiltradas)
+}
+
+function buscar() {
+  let comidasFiltradas = comidas.filter( comida => {
+   return comida.nombre.toLowercase().includes(busqueda.value.toLowercase())
+          comida.provincia.toLowercase().includes(busqueda.value.toLowercase())
+          comida.categoria.toLowercase().includes(busqueda.value.toLowercase())
+})
+
+  mostrarComidas(comidasFiltradas)
+}
+
+filtroCategoria.addEventListener("change", filtrar)
+filtroProvincia.addEventListener("change", filtrar)
