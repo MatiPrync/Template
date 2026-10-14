@@ -85,8 +85,8 @@ mostrarComidasConFor(comidasFiltradas)
 function buscar() {
   let comidasFiltradas = comidas.filter( comida => {
    return comida.nombre.toLowercase().includes(busqueda.value.toLowercase())
-          comida.provincia.toLowercase().includes(busqueda.value.toLowercase())
-          comida.categoria.toLowercase().includes(busqueda.value.toLowercase())
+        ||  comida.provincia.toLowercase().includes(busqueda.value.toLowercase())
+        ||  comida.categoria.toLowercase().includes(busqueda.value.toLowercase())
 })
 
   mostrarComidas(comidasFiltradas)
@@ -94,3 +94,4 @@ function buscar() {
 
 filtroCategoria.addEventListener("change", filtrar)
 filtroProvincia.addEventListener("change", filtrar)
+busqueda.addEventListener("input", buscar)
