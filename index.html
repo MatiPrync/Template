@@ -38,38 +38,32 @@
     <script type="module" src="./main.js"></script>
 
 
+
     <header class="filtros">
-      <input type="search" id="buscador" placeholder="Buscar por nombre, provincia, categoria, ingredientes">
-
-
+    
+      <input
+        type="search"
+        id="buscador"
+        placeholder="Buscar por nombre, provincia, categoría o ingredientes"
+      >
+    
+      <select id="filtroNombre">
+      </select>
+    
+      <!-- Filtro por categoría -->
       <select id="filtroCategoria">
-        <option value="">Todas las Categorías</option>
-        <option value="Parrilla">Parrilla</option>
-        <option value="Horno">Horno</option>
-        <option value="Guiso">Guiso</option>
-        <option value="Frito">Frito</option>
       </select>
-
+    
+      <!-- Filtro por provincia -->
       <select id="filtroProvincia">
-        <option value="">Todas las Categorías</option>
-        <option value="Buenos Aires">Buenos Aires</option>
-        <option value="Cordoba">Cordoba</option>
-        <option value="Entre Ríos">Entre Ríos</option>
-        <option value=""></option>
       </select>
-
+    
+      <!-- Filtro por ingredientes -->
+      <select id="filtroIngredientes">
+      </select>
     </header>
+    
 
 
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
-    <section class="Caja"></section>
 </body>
 </html>

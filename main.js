@@ -56,11 +56,24 @@ agregarComidaForm.addEventListener("submit", (event) => {
   event.preventDefault()
   //alert("Comida agregada: " + event.target.nombre.value);
 
+  const ingredientesInputs = document.querySelectorAll(".ingrediente");
+  let ingredientes = []
+
+  ingredientesInputs.forEach(winput => {
+    ingredientes.push(input.value);
+  })
+
+  ingredientesContainer.innerHTML = ` 
+  <input type="text class=ingrediente" placeholder="Ingrediente" rquiered>
+  `
+
+    
+
   let nuevaComida = {
   nombre:event.target.nombre.value,
   provincia:event.target.provincia.value,
   categoria:event.target.categoria.value,
-  ingredientes:event.target.ingredientes.value
+  ingredientes: ingredientes
   }
 
   comidas.push(nuevaComida)
@@ -95,3 +108,12 @@ function buscar() {
 filtroCategoria.addEventListener("change", filtrar)
 filtroProvincia.addEventListener("change", filtrar)
 busqueda.addEventListener("input", buscar)
+
+
+const agregarIngredienteBtn = document.getElementById("agregarIngrediente")
+const ingredientesContainer = document.querySelector(".contenedor-ingredientes")
+
+agregarIngredienteBtn.addEventListener("click", () => {
+  ingredientesContainer.innerHTML +=
+    <input type="text class=ingrediente" placeholder="Ingrediente" rquiered>
+})
