@@ -3,67 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas Argentinas</title> 
-    <link rel="stylesheet" href="style.css"> 
+    <title>form comida</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-
-    </header>
-
     <header class="filtros">
-      <input type="search" id="">
+      <input type="search" id="buscador" placeholder="buscar por nombre, provincia o categoria">
+      <select id="filtroCategoria">
+        <option value="">Todas las categorias</option>
+        <option value="Parrilla">Parrilla</option>
+        <option value="Horno">Horno</option>
+        <option value="Guiso">Guiso</option>
+        <option value="Frito">Frito</option>
+      </select>
+
+
+      <select id="fitroProvincia">
+        <option value="">Todas las provincias</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="Salta">Salta</option>
+        <option value="Cordoba">Cordoba</option>
+        <option value="Entre ríos">Entre ríos</option>
+        </select>
     </header>
-    
-    <main class="comida-container" id="comidaContainer"></main> 
 
-    <section class="addFood">
+    <main class="comida-container" id="comidaContainer">
+    </main>    
 
-      <form id="agregarComidaForm">
+    <footer class="addFood">
+      <form class="formulario" id="agregarComidaForm">
         <h2>Agregar Comida</h2>
-
-        <label for="nombre">Nombre de la comida</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre de la comida" required>
-
-        <label for="provincia">Provincia</label>
-        <input type="text" id="provincia" name="provincia" required>
-
-        <label for="categoria">Categoría</label>
-        <input type="text" id="categoria" name="categoria" required>
-
+        <Label for="nombre">Nombre de la comida:</Label>
+        <input type="text" id="nombre" placeholder="Nombre de la comida" required >
+        <br>
+        <Label for="provincia">Provincia:</Label>
+        <input type="text" id="provincia" placeholder="provincia" required >
+        <br>
+        <Label for="categoria">categoria:</Label>
+        <input type="text" id="categoria" placeholder="categoria" required >
+        <br>
+        <label for="ingredientes">Ingredientes(separados por ,):</label>
+        <input type="text" id="ingredientes" placeholder="Ingredientes" required>
         <button type="submit">Agregar</button>
       </form>
-    </section>
-
+    </footer>
     <script type="module" src="./main.js"></script>
-
-
-
-    <header class="filtros">
-    
-      <input
-        type="search"
-        id="buscador"
-        placeholder="Buscar por nombre, provincia, categoría o ingredientes"
-      >
-    
-      <select id="filtroNombre">
-      </select>
-    
-      <!-- Filtro por categoría -->
-      <select id="filtroCategoria">
-      </select>
-    
-      <!-- Filtro por provincia -->
-      <select id="filtroProvincia">
-      </select>
-    
-      <!-- Filtro por ingredientes -->
-      <select id="filtroIngredientes">
-      </select>
-    </header>
-    
-
-
 </body>
 </html>
